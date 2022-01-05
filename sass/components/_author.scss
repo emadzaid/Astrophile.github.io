@@ -1,0 +1,161 @@
+.author
+
+{
+    width: 60%;
+
+    @include respond(tab-land)
+    {
+        width: 100%;
+    }
+
+    &__shape
+
+    {
+        @include respond(tab-land)
+        {
+            margin: 0 auto;
+        }
+    
+        position: relative;
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        overflow: hidden;
+        float: left;
+        transform: translateX(-3rem);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        transition: all .4s;
+
+        @include respond(tab-land)
+        {
+            height: 15rem;
+            width: 15rem;
+            transform: translateX(0);
+            clip-path: none;
+            shape-outside: none;
+            float: none;
+
+        }
+
+    }
+
+    &__img
+
+    {
+        height: 100%;
+        transform: translateX(-2rem);
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        transition: all .5s;
+
+        @include respond(tab-land)
+        {
+            filter: blur(0);
+            -webkit-filter: blur(0);
+        }
+
+      
+    }
+
+    &__caption
+
+    {
+
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 2s;
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include respond(tab-land)
+        {
+            opacity: 0;
+        }
+
+        
+    }
+
+    &__details
+
+    {
+   
+        opacity: 0;
+        font-size: 1.8rem;
+
+        @include respond(tab-land)
+        {
+            opacity: 1;
+            font-size: 1.5rem;
+        }
+
+        @include respond(tab-land)
+        {
+           text-align: center;
+        }
+            
+    }
+
+    &:hover &__shape
+
+    {
+        border: 1rem solid rgba($color-grey-light,.5);
+
+          
+        @include respond(tab-land)
+        {
+            border:none;
+        }
+    }
+
+    &:hover &__details
+
+    {
+        animation: moveInLeftBig 2s;
+        opacity: 1;
+
+        
+        @include respond(tab-land)
+        {
+            animation: none;
+        }
+    }
+
+    &:hover &__caption
+
+    {
+        opacity: 0;
+
+    }
+
+    &:hover &__img
+
+    {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+
+
+    &--right
+    {
+       margin: 0 auto;
+    }
+
+    &--last
+    {
+        float: right;
+
+        @include respond(tab-land)
+        {
+            float: none;
+        }
+
+    }
+} 

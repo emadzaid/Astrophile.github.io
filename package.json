@@ -1,0 +1,17 @@
+{
+  "name": "Astrophile",
+  "version": "1.0.0",
+  "description": "my own page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w" 
+  },
+  "author": "Emad-Man",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

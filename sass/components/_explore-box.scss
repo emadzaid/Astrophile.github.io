@@ -1,0 +1,24 @@
+.explore-box {
+
+    padding: 2.5rem;
+    background-color: transparent; 
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba($color-black, .3);
+    transition: all .3s;
+    border: 1rem solid rgba($color-grey-medium, .3);
+
+
+    &__icon {
+
+        font-size: 4rem;
+
+    }
+
+
+    &:hover
+    {
+        transform: translateY(-.5rem);
+    }
+
+}
